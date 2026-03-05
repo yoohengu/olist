@@ -1,0 +1,69 @@
+erDiagram
+    FARM ||--o{ ENV_LOG : has
+    FARM ||--o{ GROWTH_DAILY : has
+    FARM ||--o{ PRODUCTION_DAILY : has
+    FARM ||--o{ ENERGY_DAILY : has
+
+    ITEM ||--o{ ENV_LOG : relates
+    ITEM ||--o{ GROWTH_DAILY : relates
+
+    FARM {
+        string farm_cde PK
+    }
+
+    ITEM {
+        string itemCode PK
+    }
+
+    %% High-frequency long table (30M+ rows)
+    ENV_LOG {
+        int Unnamed_0
+        string farm_cde FK
+        datetime measDate
+        string sectCode
+        string classCode
+        string fatrCode
+        string senVal
+        string itemCode FK
+    }
+
+    %% Daily growth measurements
+    GROWTH_DAILY {
+        date measDate
+        string farm_cde FK
+        string itemCode FK
+        float flowerTop
+        float grwtLt
+        float lefCunt
+        float lefLt
+        float lefBt
+        float stemThck
+        float flanGrupp
+        float frtstGrupp
+        float hvstGrupp
+        float frtstCo
+    }
+
+    %% Daily production (yield/quality)
+    PRODUCTION_DAILY {
+        date measDate
+        string farm_cde FK
+        string itemGrade
+        float outtrn
+    }
+
+    %% Daily energy usage
+    ENERGY_DAILY {
+        date measDate
+        string farm_cde FK
+        int water_usage
+        int water_cost
+        int fertilizer_usage
+        int fertilizer_cost
+        int heating_energy_usage
+        int heating_energy_cost
+        int CO2_usage
+        int CO2_cost
+        int mist_usage_time
+        int mist_cost
+    }

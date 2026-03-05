@@ -1,0 +1,33 @@
+# Core numerical
+numpy>=1.26
+pandas>=2.1
+scipy>=1.11
+
+# Visualization
+matplotlib>=3.8
+seaborn>=0.13
+plotly>=5.18
+
+# Machine Learning
+scikit-learn>=1.4
+xgboost>=2.0
+lightgbm>=4.1
+catboost>=1.2
+
+# Model Explainability
+shap>=0.44
+eli5>=0.13
+
+# Hyperparameter tuning
+optuna>=3.5
+
+# Data processing
+category-encoders>=2.6
+
+# Jupyter
+jupyterlab>=4.0
+ipykernel>=6.29
+
+# Utilities
+tqdm>=4.66
+joblib>=1.3

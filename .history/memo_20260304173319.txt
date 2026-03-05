@@ -1,0 +1,20 @@
+[가상환경]
+source .venv/Scripts/activate
+
+[판매자 분포 구조 분석]
+# 테이블
+olist_sellers - seller_id, seller_city, seller_state
+olist_customers - customer_city, customer_state
+olist_orders
+products
+olist_geolocation(보류)
+
+# 분석 흐름
+1. Seller 지역 분포
+2. Seller 지역 집중도
+3. Seller vs Customer 분포
+4. Marketplace 카테고리 구조
+5. Region × Category 분석
+6. Seller 활동량 분석
+7. Marketplace 공급 구조 인사이트
+
